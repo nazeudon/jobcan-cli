@@ -2,6 +2,7 @@ use std::str::FromStr;
 
 #[derive(Debug, PartialEq)]
 pub enum Mode {
+    Auth,
     Start,
     End,
 }
@@ -10,6 +11,7 @@ impl FromStr for Mode {
     type Err = ();
     fn from_str(input: &str) -> Result<Mode, Self::Err> {
         match input {
+            "auth" => Ok(Mode::Auth),
             "start" => Ok(Mode::Start),
             "end" => Ok(Mode::End),
             _ => Err(()),
