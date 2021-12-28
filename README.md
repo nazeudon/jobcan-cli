@@ -13,42 +13,36 @@ jobcan end
 ```
 
 ## Set up
-#### Clone this repo
+### Clone this Repo
 ```
 git clone git@github.com:nazeudon/jobcan-cli.git
 ```
 
-#### Create Credential json file
-```zsh
-cd /path/to/this/repo
-touch ./src/credential.json
-vim ./src/credential.json
-```
-
-```vim
-{
-    "email": "youremail@mail.com",
-    "password": "yourpassword"
-}
-```
-
-#### Install
-(If you haven't installed `cargo` yet.)
+### Install
+(If you haven't installed `cargo` yet)
 ```zsh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 We all need to
 ```zsh
-cargo install
+cd /path/to/this/repo
+cargo install --path .
 ```
 
-#### Now You Can Enjoy!
+### Register your JOBCAN Account
+Follow the CLI to input
+(You can run it from any directory of your choice)
+```zsh
+jobcan auth
+```
+
+### Now You Can Enjoy!
+(You can run it from any directory of your choice)
 ```zsh
 jobcan start
 jobcan end
 ```
 
 ## Todo
-- credential.jsonをCLI作成できるよにする
 - 工数をCLIから入力できるようにする
