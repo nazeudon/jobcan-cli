@@ -38,6 +38,7 @@ vim ./src/credential.json
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+We all need to
 ```zsh
 cargo install
 ```
